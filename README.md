@@ -3,6 +3,7 @@ Private repo for Prof Morbius
 
 ## Tutorial References
 [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
+[LC VCO](https://ieeexplore.ieee.org/document/10376336)
 
 ## Standards
 Design standards for our chip
