@@ -1,10 +1,6 @@
 # prof-morbius-rf-chip
 Private repo for Prof Morbius
 
-## Tutorial References
-[XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
-[LC VCO](https://ieeexplore.ieee.org/document/10376336)
-
 ## Standards
 Design standards for our chip
 * Transistor: Lg larger than 180nm or maybe 300nm to prevent SCE (Short Channel Effect)
@@ -32,3 +28,7 @@ Here are quick links to important files and folders.
 * Multi-finger with Fingers = ...
 * L transistor is arbitrary 0.3 µm as minimum
 * Decide W/L using XSCHEM simulation
+
+## Tutorial References
+[XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
+[LC VCO](https://ieeexplore.ieee.org/document/10376336)
