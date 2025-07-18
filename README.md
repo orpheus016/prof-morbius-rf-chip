@@ -15,7 +15,7 @@ Here are quick links to important files and folders.
 ## Specification
 ### System
 * For 900MHz ISM Radio: 902–928 MHz tuning range with ideally 150 hop frequency & 50 channels
-* For Lora: Non FHSS but CSSS(?)
+* For LoRa: Non FHSS but CSSS(?)
 ### Transistor
 
 | Block                 | Typical W/L (per transistor)   |
