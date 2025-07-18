@@ -1,16 +1,16 @@
 # prof-morbius-rf-chip
 Private repo for Prof Morbius
 
-## Standards
-Design standards for our chip
-* Transistor: Lg larger than 180nm or maybe 300nm to prevent SCE (Short Channel Effect)
-* Layout: Multifingered transistor to reduce gate resistance
-
 ## Directories
 Here are quick links to important files and folders.
 - [`Project Timeline`]( https://docs.google.com/spreadsheets/d/1ED5GlzHhh6iyMfWsxwQK_LsvYb5z8FFv7d2K7-hli_0/edit?usp=sharing ) : Timeline for the development
 - [`Project Proposal`]( https://docs.google.com/presentation/d/1d4etSCZGezYiTcyhqJMmxZKgGMZXT_DFGWo_tfqO1z0/edit?usp=sharing ) : Proposal for the Project
 - [`Main Google Drive`]( https://drive.google.com/drive/folders/1l0VH1jhEloeevTNJNOWizoYGq4sh_gAN?usp=sharing ) : The main google drive for this project
+
+## Standards
+Design standards for our chip
+* Transistor: Lg larger than 180nm or maybe 300nm to prevent SCE (Short Channel Effect)
+* Layout: Multifingered transistor to reduce gate resistance
 
 ## Specification
 ### System
@@ -28,6 +28,26 @@ Here are quick links to important files and folders.
 * Multi-finger with Fingers = ...
 * L transistor is arbitrary 0.3 µm as minimum
 * Decide W/L using XSCHEM simulation
+
+## Xshem Simulation
+### Flow
+1. Design schematic
+2. Make a symbol from (shortcut `A`)
+3. Import MODELS and NGSPICE from test MOSFET
+4. Script on imported NGSPICE to alter from DC to AC
+5. Define transient and simulation
+6. Click Netlist
+7. Modify file dir for .lib etc that contains pdk (personally
+`.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice`
+`.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical`
+)
+8. Run below Ngspice commands
+
+### Ngspice Commands 
+Click simulate in Xschem to enter to Ngspice
+`set` - show what kind of plots can be viewed
+`display` - show pins with its unit and what kind of variable can be plotted
+`plot <var1> <var2> <var...>` - show plot of variable(s)
 
 ## Tutorial References
 * [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
