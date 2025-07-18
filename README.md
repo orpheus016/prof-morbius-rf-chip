@@ -48,7 +48,7 @@ Design standards for our chip
 2. `set` - show what kind of plots can be viewed
 3. `display` - show pins with its unit and what kind of variable can be plotted
 4. `plot <var1> <var2> <var...>` - shows plot of variable(s)
-5. Press netlist then Simulate again after modifying script (i need to edit the file dir everytime it makes a netlist..)
+5. Press netlist then Simulate again after modifying script (change MODELS adjust to your directory for design.ngspice and sm141064.ngspice)
 
 ## Tutorial References
 * [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
