@@ -44,10 +44,10 @@ Design standards for our chip
 8. Run below Ngspice commands
 
 ### Ngspice Commands 
-Click simulate in Xschem to enter to Ngspice
-`set` - show what kind of plots can be viewed
-`display` - show pins with its unit and what kind of variable can be plotted
-`plot <var1> <var2> <var...>` - show plot of variable(s)
+1. Click simulate in Xschem to enter to Ngspice
+2. `set` - show what kind of plots can be viewed
+3. `display` - show pins with its unit and what kind of variable can be plotted
+4. `plot <var1> <var2> <var...>` - show plot of variable(s)
 
 ## Tutorial References
 * [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
