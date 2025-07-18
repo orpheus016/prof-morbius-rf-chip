@@ -30,5 +30,5 @@ Here are quick links to important files and folders.
 * Decide W/L using XSCHEM simulation
 
 ## Tutorial References
-[XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
-[LC VCO](https://ieeexplore.ieee.org/document/10376336)
+* [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
+* [LC VCO](https://ieeexplore.ieee.org/document/10376336)
