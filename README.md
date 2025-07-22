@@ -51,7 +51,7 @@ Design standards for our chip
 5. Press netlist then Simulate again after modifying script (change MODELS adjust to your directory for design.ngspice and sm141064.ngspice)
 
 ### Ngspice Errors to Know
-In SPICE, the first letter of an instance name `@name in symbol` determines the type of component.
+In SPICE, the first letter of an instance name `@name` in symbol determines the type of component.
 * R is for resistors
 * C is for capacitors
 * M is for MOSFETs
