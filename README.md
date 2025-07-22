@@ -50,6 +50,14 @@ Design standards for our chip
 4. `plot <var1> <var2> <var...>` - shows plot of variable(s)
 5. Press netlist then Simulate again after modifying script (change MODELS adjust to your directory for design.ngspice and sm141064.ngspice)
 
+### Ngspice Errors to Know
+In SPICE, the first letter of an instance name `@name in symbol` determines the type of component.
+* R is for resistors
+* C is for capacitors
+* M is for MOSFETs
+* L is for inductors
+* X is for subcircuits
+
 ## Tutorial References
 * [XSCHEM](https://www.youtube.com/watch?v=MdywD87-DVg)
 * [LC VCO](https://ieeexplore.ieee.org/document/10376336)
