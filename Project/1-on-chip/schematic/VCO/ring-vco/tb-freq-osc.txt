@@ -1,0 +1,20 @@
+"
+
+* Run transient analysis. Ensure the stop time is long enough
+* for the oscillator to reach steady state.
+.tran 1n 1u
+
+* Measure the period and frequency after the oscillator has stabilized.
+* These commands are processed after the transient analysis finishes.
+.meas tran t_period TRIG V(Vosc) VAL=2V RISE=10 TARG V(Vosc) VAL=2V RISE=11
+.meas tran frequency PARAM='1/t_period'
+
+.control
+* This block runs after the simulation and measurement.
+* It can be used to plot results or print the measured values.
+plot V(Vosc)
+print t_period frequency
+write sim_output.raw
+.endc
+"
+
