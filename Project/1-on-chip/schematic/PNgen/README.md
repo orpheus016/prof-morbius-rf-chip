@@ -50,7 +50,7 @@ This project is built using the following custom-designed standard cells:
 | `VSS`    | Input  | 1-bit | Ground.                                                                   |
 | `CLK`    | Input  | 1-bit | System clock. The LFSR advances on the rising edge.                       |
 | `RST`    | Input  | 1-bit | Active-high control signal for the MUXes to load the seed.                |
-| 'PN_SEL' | Input  | 1-bit | Selector to change the feedback polynomial equation                       |
+| `PN_SEL` | Input  | 1-bit | Selector to change the feedback polynomial equation                       |
 | `SEED[3:0]`| Input  | 4-bit | The 4-bit initial value to load into the LFSR. **Must not be `0000`**.      |
 | `OUT[3:0]` | Output | 4-bit | The current 4-bit pseudo-random state of the generator.                   |
 
