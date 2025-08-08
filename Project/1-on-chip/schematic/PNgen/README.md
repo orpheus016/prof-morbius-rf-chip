@@ -1,10 +1,6 @@
-Of course. Here is the README.md template for your project, formatted as plain text that you can copy directly.
+# 4-Bit PN Sequence Generator (15 Channels)
 
------
-
-# 4-Bit PN Sequence Generator for FHSS Systems
-
-This repository contains the schematic, layout, and simulation files for a 4-bit, 15-channel Pseudo-random Noise (PN) sequence generator. This module is designed as the core hopping pattern generator for a Frequency-Hopping Spread Spectrum (FHSS) communication system.
+This repository contains the schematic and testbench files for a 4-bit, 15-channel Pseudo-random Noise (PN) sequence generator. This module is designed as the core hopping pattern generator for a Frequency-Hopping Spread Spectrum (FHSS) communication system.
 
 -----
 
@@ -21,15 +17,6 @@ In an FHSS system, the transmitter and receiver must change frequencies in a syn
   * **Synchronous Load:** Uses a MUX-based architecture to synchronously load a `SEED` value, ensuring robust and predictable initialization.
   * **Configurable Seed:** The initial state of the sequence can be set via a 4-bit `SEED` input.
   * **Standard Cell Design:** Built from fundamental logic gates (DFFs, MUXes, XOR) for use in a standard cell design flow.
-
------
-
-## 🛠️ Technology Stack
-
-  * **Schematic Capture:** [Xschem](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html)
-  * **VLSI Layout:** [Magic](http://opencircuitdesign.com/magic/)
-  * **Circuit Simulation:** [Ngspice](http://ngspice.sourceforge.net/)
-  * **PDK:** GlobalFoundries 180nm D (gf180mcuD)
 
 -----
 
@@ -63,10 +50,10 @@ This project is built using the following custom-designed standard cells:
 | `VSS`    | Input  | 1-bit | Ground.                                                                   |
 | `CLK`    | Input  | 1-bit | System clock. The LFSR advances on the rising edge.                       |
 | `RST`    | Input  | 1-bit | Active-high control signal for the MUXes to load the seed.                |
+| 'PN_SEL' | Input  | 1-bit | Selector to change the feedback polynomial equation                       |
 | `SEED[3:0]`| Input  | 4-bit | The 4-bit initial value to load into the LFSR. **Must not be `0000`**.      |
 | `OUT[3:0]` | Output | 4-bit | The current 4-bit pseudo-random state of the generator.                   |
-| `SET_FF` | Input  | 1-bit | Asynchronous Set for the DFFs (Tied high in this design).                 |
-| `RST_FF` | Input  | 1-bit | Asynchronous Reset for the DFFs (Tied high in this design).               |
+
 
 -----
 
@@ -84,17 +71,7 @@ The circuit's functionality is verified using the `tb_pn.sch` testbench.
     ```
 4.  A plot window will display the waveforms, showing the `RST` signal initializing the sequence and the `OUT` bus cycling through its states.
 
------
-
-## 🎨 Layout Notes
-
-When creating the physical layout in Magic, pay special attention to:
-
-  * **Clock Distribution:** Route the `CLK` signal on a low-resistance metal layer with a clock tree or spine to minimize skew between the flip-flops.
-  * **Power Rails:** Use wide VDD and GND rails to prevent IR drop.
-  * **Signal Integrity:** Avoid running the clock line parallel to other switching signals for long distances to prevent crosstalk.
-  * **Verification:** Perform DRC and LVS checks meticulously to ensure the layout is correct and manufacturable.
-
+Alternatively, you could just simulate it using ngspice in xschem.
 -----
 
 ## 📈 Project Status
@@ -107,8 +84,8 @@ When creating the physical layout in Magic, pay special attention to:
 
 -----
 
-## 🔮 Future Work
+## 🔮 Future Improvements
 
-  * Replace the current DFF with a more robust, standard 9-NAND gate edge-triggered design to improve reliability.
+  * Make a version with rising-edge DFF.
   * Implement logic to detect and escape the forbidden "all-zeros" state.
   * Integrate the PN generator with a frequency synthesizer module.
