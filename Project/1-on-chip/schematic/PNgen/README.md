@@ -26,7 +26,7 @@ The generator is implemented as a 4-bit Linear Feedback Shift Register (LFSR).
 
   * **Feedback Polynomial:** `x⁴ + x³ + 1`
   * **Implementation:** The input to the first flip-flop is the result of an XOR operation between the outputs of the fourth and third flip-flops (`Q[3]` ⊕ `Q[2]`).
-  * **Initialization:** The LFSR is initialized via a synchronous load mechanism. When the `RST` signal is high, multiplexers route the external `SEED` value to the flip-flop inputs. The seed is loaded on the next rising clock edge.
+  * **Initialization:** The LFSR is initialized via a synchronous load mechanism. When the `RST` signal is high, multiplexers route the external `SEED` value to the flip-flop inputs. The seed is loaded on the next falling clock edge.
 
 -----
 
@@ -34,7 +34,7 @@ The generator is implemented as a 4-bit Linear Feedback Shift Register (LFSR).
 
 This project is built using the following custom-designed standard cells:
 
-  * `dff_async2`: A D-Type Flip-Flop with asynchronous Set and Reset.
+  * `dff_async2`: A D-Type Flip-Flop
   * `mux2_1`: A 2-to-1 Multiplexer.
   * `xor`: A 2-input XOR gate.
   * `nand_2`, `nand_3`: Standard 2-input and 3-input NAND gates.
