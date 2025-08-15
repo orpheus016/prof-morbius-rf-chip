@@ -92,7 +92,7 @@ C {devices/ipin.sym} -510 -200 0 0 {name=p6 lab=VDD}
 C {devices/opin.sym} 320 0 0 0 {name=p7 lab=OUT}
 C {devices/ipin.sym} -510 -150 0 0 {name=p1 lab=A}
 C {devices/ipin.sym} -440 -60 0 0 {name=p3 lab=B}
-C {devices/ipin.sym} -520 170 0 0 {name=p4 lab=GND}
+C {devices/ipin.sym} -520 170 0 0 {name=p4 lab=VSS}
 C {symbols/pfet_03v3.sym} 120 -150 2 0 {name=M1
 L=0.28u
 W=1.3u
